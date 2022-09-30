@@ -62,15 +62,18 @@ class CIFAR10DataModule(pl.LightningDataModule):
 
 
     def train_dataloader(self):
-        return DataLoader(self.cifar_train, batch_size=self.batch_size, shuffle=True, num_workers=20)
+        return DataLoader(self.cifar_train, batch_size=self.batch_size, shuffle=True)
+        # return DataLoader(self.cifar_train, batch_size=self.batch_size, shuffle=True, num_workers=20)
 
 
     def val_dataloader(self):
-        return DataLoader(self.cifar_val, batch_size=self.batch_size, num_workers=20)
+        return DataLoader(self.cifar_val, batch_size=self.batch_size)
+        # return DataLoader(self.cifar_val, batch_size=self.batch_size, num_workers=20)
 
 
     def test_dataloader(self):
-        return DataLoader(self.cifar_test, batch_size=self.batch_size, num_workers=20)
+        return DataLoader(self.cifar_test, batch_size=self.batch_size)
+        # return DataLoader(self.cifar_test, batch_size=self.batch_size, num_workers=20)
 ################################# < Cifar-10 DataModule #################################
 
 
@@ -188,6 +191,8 @@ class LitModel(pl.LightningModule):
 
 
 
+EP = 50
+
 
 
 
@@ -218,7 +223,7 @@ model = LitModel((3, 32, 32), dm.num_classes)
 wandb_logger = WandbLogger(project="2021307002_김이삭_pytorch lightning Cifar10", job_type='train')
 
 # Initialize a trainer
-trainer = pl.Trainer(max_epochs=10,
+trainer = pl.Trainer(max_epochs=EP,
                      gpus=1, 
                      logger=wandb_logger,
                      callbacks=[early_stop_callback,

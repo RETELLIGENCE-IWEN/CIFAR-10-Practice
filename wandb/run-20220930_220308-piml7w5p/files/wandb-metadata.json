@@ -1,0 +1,18 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.9.13",
+    "heartbeatAt": "2022-09-30T13:03:09.796252",
+    "startedAt": "2022-09-30T13:03:08.590392",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3070 Ti",
+    "gpu_count": 1,
+    "cpu_count": 20,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\RETELLIGENCE\\Documents\\GitHub\\CIFAR-10-Practice\\main.py",
+    "codePath": "main.py",
+    "host": "DESKTOP-NREJSHD",
+    "username": "RETELLIGENCE",
+    "executable": "D:\\MyPythons\\3.9.13_20220517\\python.exe"
+}

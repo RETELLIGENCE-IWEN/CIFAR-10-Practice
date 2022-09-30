@@ -1,0 +1,131 @@
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\accelerator_connector.py:447: LightningDeprecationWarning: Setting `Trainer(gpus=1)` is deprecated in v1.7 and will be removed in v2.0. Please use `Trainer(accelerator='gpu', devices=1)` instead.
+  rank_zero_deprecation(
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Files already downloaded and verified
+Files already downloaded and verified
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name     | Type      | Params
+---------------------------------------
+0 | conv1    | Conv2d    | 896
+1 | conv2    | Conv2d    | 9.2 K
+2 | conv3    | Conv2d    | 18.5 K
+3 | conv4    | Conv2d    | 36.9 K
+4 | pool1    | MaxPool2d | 0
+5 | pool2    | MaxPool2d | 0
+6 | fc1      | Linear    | 819 K
+7 | fc2      | Linear    | 65.7 K
+8 | fc3      | Linear    | 1.3 K
+9 | accuracy | Accuracy  | 0
+---------------------------------------
+952 K     Trainable params
+0         Non-trainable params
+952 K     Total params
+3.809     Total estimated model params size (MB)
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:236: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 20 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+
+Epoch 0:   5%|██████▌                                                                                                                                 | 75/1564 [00:01<00:21, 68.05it/s, loss=2.13, v_num=7w5p]
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:236: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 20 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+
+
+
+
+
+Epoch 0:  94%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████        | 1472/1564 [00:15<00:00, 97.58it/s, loss=1.42, v_num=7w5p]
+
+
+
+
+
+
+
+
+Epoch 1:  97%|████████████████████████████████████████████████████████████████████████████████████████████████████▏  | 1521/1564 [00:17<00:00, 87.84it/s, loss=1.39, v_num=7w5p, val_loss=1.470, val_acc=0.471]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 6:  98%|███████████████████████████████████████████████████████████████████████████████████████████████████▋  | 1529/1564 [00:15<00:00, 96.79it/s, loss=0.756, v_num=7w5p, val_loss=0.913, val_acc=0.674]
+
+
+
+
+
+
+
+Epoch 7:  95%|████████████████████████████████████████████████████████████████████████████████████████████████▋     | 1483/1564 [00:15<00:00, 94.55it/s, loss=0.757, v_num=7w5p, val_loss=0.850, val_acc=0.701]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 9:  87%|████████████████████████████████████████████████████████████████████████████████████████▏             | 1353/1564 [00:14<00:02, 92.20it/s, loss=0.618, v_num=7w5p, val_loss=0.783, val_acc=0.723]
+`Trainer.fit` stopped: `max_epochs=10` reached.
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\trainer.py:1386: UserWarning: `.test(ckpt_path=None)` was called without a model. The best model of the previous `fit` call will be used. You can pass `.test(ckpt_path='best')` to use the best model or `.test(ckpt_path='last')` to use the last model. If you pass a value, this warning will be silenced.
+Epoch 9: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 1564/1564 [00:16<00:00, 95.04it/s, loss=0.554, v_num=7w5p, val_loss=0.816, val_acc=0.725]
+Files already downloaded and verified
+Restoring states from the checkpoint path at .\2021307002_김이삭_pytorch lightning Cifar10\piml7w5p\checkpoints\epoch=9-step=14070.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from checkpoint at .\2021307002_김이삭_pytorch lightning Cifar10\piml7w5p\checkpoints\epoch=9-step=14070.ckpt
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:236: PossibleUserWarning: The dataloader, test_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 20 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Files already downloaded and verified
+Testing DataLoader 0: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:02<00:00, 147.71it/s]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       Test metric             DataLoader 0
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+        test_acc             0.710099995136261
+        test_loss           0.8572075963020325
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
