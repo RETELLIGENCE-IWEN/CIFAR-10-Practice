@@ -1,0 +1,140 @@
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\accelerator_connector.py:447: LightningDeprecationWarning: Setting `Trainer(gpus=1)` is deprecated in v1.7 and will be removed in v2.0. Please use `Trainer(accelerator='gpu', devices=1)` instead.
+  rank_zero_deprecation(
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name     | Type      | Params
+---------------------------------------
+0 | conv1    | Conv2d    | 896
+1 | conv2    | Conv2d    | 9.2 K
+2 | conv3    | Conv2d    | 18.5 K
+3 | conv4    | Conv2d    | 36.9 K
+4 | pool1    | MaxPool2d | 0
+5 | pool2    | MaxPool2d | 0
+6 | fc1      | Linear    | 819 K
+7 | fc2      | Linear    | 65.7 K
+8 | fc3      | Linear    | 1.3 K
+9 | accuracy | Accuracy  | 0
+---------------------------------------
+952 K     Trainable params
+0         Non-trainable params
+952 K     Total params
+3.809     Total estimated model params size (MB)
+Files already downloaded and verified
+Files already downloaded and verified
+Sanity Checking: 0it [00:00, ?it/s]
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:236: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 20 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+Sanity Checking DataLoader 0: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.43it/s]
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:236: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 20 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+
+
+
+
+
+Epoch 0:  99%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊ | 1550/1564 [00:13<00:00, 113.26it/s, loss=1.45, v_num=exut]
+
+
+
+
+
+
+Epoch 1:  95%|████████████████████████████████████████████████████████████████████████████████████████████████▍     | 1479/1564 [00:14<00:00, 105.21it/s, loss=1.23, v_num=exut, val_loss=1.390, val_acc=0.491]
+
+
+
+
+
+
+
+Epoch 2:  96%|███████████████████████████████████████████████████████████████████████████████████████████████████    | 1504/1564 [00:15<00:00, 97.80it/s, loss=1.12, v_num=exut, val_loss=1.270, val_acc=0.533]
+
+
+
+
+
+
+
+Epoch 3:  99%|█████████████████████████████████████████████████████████████████████████████████████████████████████▎| 1554/1564 [00:14<00:00, 103.66it/s, loss=0.89, v_num=exut, val_loss=1.100, val_acc=0.610]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 5:  93%|█████████████████████████████████████████████████████████████████████████████████████████████▋       | 1451/1564 [00:14<00:01, 101.15it/s, loss=0.849, v_num=exut, val_loss=0.908, val_acc=0.674]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 8:  92%|█████████████████████████████████████████████████████████████████████████████████████████████▉        | 1441/1564 [00:14<00:01, 96.95it/s, loss=0.682, v_num=exut, val_loss=0.769, val_acc=0.730]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 11:  88%|████████████████████████████████████████████████████████████████████████████████████████▌            | 1371/1564 [00:14<00:02, 93.83it/s, loss=0.376, v_num=exut, val_loss=0.759, val_acc=0.746]
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\trainer.py:1386: UserWarning: `.test(ckpt_path=None)` was called without a model. The best model of the previous `fit` call will be used. You can pass `.test(ckpt_path='best')` to use the best model or `.test(ckpt_path='last')` to use the last model. If you pass a value, this warning will be silenced.
+Epoch 11: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1564/1564 [00:16<00:00, 96.64it/s, loss=0.393, v_num=exut, val_loss=0.756, val_acc=0.745]
+Files already downloaded and verified
+Restoring states from the checkpoint path at .\2021307002_김이삭_pytorch lightning Cifar10\zgqyexut\checkpoints\epoch=11-step=16884.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from checkpoint at .\2021307002_김이삭_pytorch lightning Cifar10\zgqyexut\checkpoints\epoch=11-step=16884.ckpt
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:236: PossibleUserWarning: The dataloader, test_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 20 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Files already downloaded and verified
+Testing DataLoader 0: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:01<00:00, 170.48it/s]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       Test metric             DataLoader 0
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+        test_acc            0.7426000237464905
+        test_loss           0.8205683827400208
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────

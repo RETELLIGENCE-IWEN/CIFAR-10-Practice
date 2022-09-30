@@ -78,7 +78,7 @@ class CIFAR10DataModule(pl.LightningDataModule):
 
 
 
-
+################################## Custom Callback > ####################################
 class ImagePredictionLogger(Callback):
     def __init__(self, val_samples, num_samples=32):
         super().__init__()
@@ -99,7 +99,7 @@ class ImagePredictionLogger(Callback):
                                                  preds[:self.num_samples], 
                                                  val_labels[:self.num_samples])]
             })
-
+#################################### < Custom Callback ##################################
 
 
 
@@ -190,10 +190,8 @@ class LitModel(pl.LightningModule):
 
 
 
-
+# Max Epochs
 EP = 50
-
-
 
 
 early_stop_callback = EarlyStopping('val_loss')
