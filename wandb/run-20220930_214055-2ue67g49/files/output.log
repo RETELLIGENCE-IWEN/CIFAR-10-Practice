@@ -1,0 +1,124 @@
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\accelerator_connector.py:447: LightningDeprecationWarning: Setting `Trainer(gpus=1)` is deprecated in v1.7 and will be removed in v2.0. Please use `Trainer(accelerator='gpu', devices=1)` instead.
+  rank_zero_deprecation(
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Files already downloaded and verified
+Files already downloaded and verified
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name     | Type      | Params
+---------------------------------------
+0 | conv1    | Conv2d    | 896
+1 | conv2    | Conv2d    | 9.2 K
+2 | conv3    | Conv2d    | 18.5 K
+3 | conv4    | Conv2d    | 36.9 K
+4 | pool1    | MaxPool2d | 0
+5 | pool2    | MaxPool2d | 0
+6 | fc1      | Linear    | 819 K
+7 | fc2      | Linear    | 65.7 K
+8 | fc3      | Linear    | 1.3 K
+9 | accuracy | Accuracy  | 0
+---------------------------------------
+952 K     Trainable params
+0         Non-trainable params
+952 K     Total params
+3.809     Total estimated model params size (MB)
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:236: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 20 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Sanity Checking DataLoader 0:   0%|                                                                                                                                                      | 0/2 [00:00<?, ?it/s]
+D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:236: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 20 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+
+
+
+
+
+
+Epoch 0:  91%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌           | 1431/1564 [00:15<00:01, 93.93it/s, loss=1.48, v_num=7g49]
+
+
+
+
+
+
+
+Epoch 1:  99%|████████████████████████████████████████████████████████████████████████████████████████████████████▌ | 1541/1564 [00:15<00:00, 101.79it/s, loss=1.26, v_num=7g49, val_loss=1.450, val_acc=0.469]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 4:  98%|██████████████████████████████████████████████████████████████████████████████████████████████████▌  | 1526/1564 [00:14<00:00, 102.06it/s, loss=0.981, v_num=7g49, val_loss=1.040, val_acc=0.638]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 7:  92%|█████████████████████████████████████████████████████████████████████████████████████████████▊        | 1438/1564 [00:14<00:01, 96.51it/s, loss=0.688, v_num=7g49, val_loss=0.843, val_acc=0.706]
+
+
+
+
+
+
+
+Epoch 8:  94%|███████████████████████████████████████████████████████████████████████████████████████████████▌      | 1465/1564 [00:15<00:01, 96.82it/s, loss=0.617, v_num=7g49, val_loss=0.833, val_acc=0.709]
+
+
+
+
+
+
+
+
+Epoch 9: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 1564/1564 [00:15<00:00, 101.89it/s, loss=0.556, v_num=7g49, val_loss=0.790, val_acc=0.739]
+`Trainer.fit` stopped: `max_epochs=10` reached.
+Traceback (most recent call last):
+  File "c:\Users\RETELLIGENCE\Documents\GitHub\CIFAR-10-Practice\main.py", line 234, in <module>
+    trainer.test()
+  File "D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 862, in test
+    return self._call_and_handle_interrupt(self._test_impl, model, dataloaders, ckpt_path, verbose, datamodule)
+  File "D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 650, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 900, in _test_impl
+    self._data_connector.attach_data(model, test_dataloaders=dataloaders, datamodule=datamodule)
+  File "D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py", line 154, in attach_data
+    _check_dataloader_none(test_dataloaders, self._test_dataloader_source, self.trainer.state.fn)
+  File "D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py", line 605, in _check_dataloader_none
+    raise ValueError(
+ValueError: An invalid dataloader was passed to `Trainer.test(dataloaders=...)`. Either pass the dataloader to the `.test()` method OR implement `def test_dataloader(self):` in your LightningModule/LightningDataModule.

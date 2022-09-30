@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "c:\Users\RETELLIGENCE\Documents\GitHub\CIFAR-10-Practice\main.py", line 221, in <module>
+    trainer = pl.Trainer(max_epochs=10,
+  File "D:\MyPythons\3.9.13_20220517\lib\site-packages\pytorch_lightning\utilities\argparse.py", line 345, in insert_env_defaults
+    return fn(self, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'checkpoint_callback'
